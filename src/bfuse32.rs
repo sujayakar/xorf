@@ -55,7 +55,7 @@ use serde::{Deserialize, Serialize};
 /// [`Fuse32`]: crate::Fuse32
 /// [`serde`]: http://serde.rs
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct BinaryFuse32 {
     seed: u64,
     segment_length: u32,
